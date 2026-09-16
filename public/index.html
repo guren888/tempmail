@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guren TempMail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <span class="brand">GUREN</span>
+    <h1>TempMail</h1>
+    <p>Email sementara berbasis Mail.cx.</p>
+  </header>
+
+  <section class="card">
+    <h2>Buat Email</h2>
+    <label>Nama email</label>
+    <div class="row">
+      <input id="username" placeholder="guren123">
+      <button id="random">Acak</button>
+    </div>
+
+    <label>Domain</label>
+    <select id="domain"><option>Memuat...</option></select>
+
+    <div class="emailbox">
+      <input id="email" readonly placeholder="Belum ada email">
+      <button id="copy">Copy</button>
+    </div>
+
+    <button id="create" class="primary">Buat Email</button>
+    <button id="refresh">Refresh Inbox</button>
+    <div id="status" class="status">Siap</div>
+  </section>
+
+  <section class="card">
+    <div class="head">
+      <h2>Inbox</h2>
+      <span id="count">0 pesan</span>
+    </div>
+    <div id="messages"><div class="empty">Belum ada email.</div></div>
+  </section>
+
+  <div id="reader" class="modal hidden">
+    <div class="modalbox">
+      <div class="head">
+        <div>
+          <h2 id="subject">Pesan</h2>
+          <small id="from"></small>
+        </div>
+        <button id="close">Tutup</button>
+      </div>
+      <pre id="body"></pre>
+    </div>
+  </div>
+
+  <footer>Guren TempMail · Mail.cx</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
